@@ -1,13 +1,15 @@
 ---
 import { Image } from "astro:assets";
+
+const navList: string[]  = ['Features','Team','Sign In']
 ---
-<nav class="flex justify-between m-3 px-4 py-2 text-base w-11/12 ">
+<nav class="flex justify-between m-3 px-4 py-2 text-sm cursor-default items-center select-none w-11/12 max-sm:w-full ">
     <div >
         <Image src='/images/logo.svg' alt='logo' width='70' height='30'/>
     </div>
-    <ul class="flex justify-evenly w-1/4 max-lg:w-1/2">
-        <li class="">Features</li>
-        <li>Team</li>
-        <li>Sign In</li>
+    <ul class="flex justify-evenly w-2/6  max-md:w-3/5 min-md:bg-red-600 ">
+    	{navList.map(item =>(
+	    <li class="transition ease-in-out delay-150 cursor-pointer opacity-60 hover:opacity-100 hover:font-bold hover:underline hover:underline-offset-2 hover:duration-1000 ">{item}</li>	
+	))}
     </ul>
 </nav>

@@ -10,7 +10,11 @@ export default {
 					footer: ' hsl(216, 53%, 9%)',
 					tma: ' hsl(219, 30%, 18%)'
 				},
-			}
+			},
+			fontFamily : {
+				   raleway : [],
+				   openSans : []
+			},
 		},
 	},
 	plugins: [],
