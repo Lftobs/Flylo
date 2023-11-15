@@ -1,3 +1,4 @@
 ---
+const { isDefault } = Astro.props;
 ---
-<button class="bg-red-600">Get Started</button>
+<button class={` cursor-pointer font-raleway font-semibold border-slate-50 mt-4 h-12 w-60 rounded-3xl bg-gradient-to-r from-blue-100 to-blue-200 hover:from-blue-100 hover:to-blue-100 ${isDefault ? 'mb-32': ''} `} >Get Started</button>
