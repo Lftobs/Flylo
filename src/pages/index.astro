@@ -4,7 +4,8 @@ import { Image } from 'astro:assets';
 import Button from "../components/Button.astro";
 import Features from '../components/Features.astro';
 import Works from '../components/Works.astro';
-
+import Reviews from '../components/Reviews.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Fylo">
@@ -18,9 +19,15 @@ import Works from '../components/Works.astro';
 			</div>
 			<Features />
 			<Works />
+			<Reviews />
+			
+			<!-- <Form /> -->
 		</section>
 		
+		
 	</main>
+	
+	<Footer />
 </Layout>
 
 <style>

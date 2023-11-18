@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+
+---
+<footer class=" grid place-items-center bg-bg-footer font-openSans text-sm mt-[-4rem] pt-24 w-full max-sm:-m-36 max-sm:pt-40">
+    <div class=" w-11/12 mt-5">
+        <Image src="/images/logo.svg" alt="logo" height={50} width={150}/>
+    </div>
+    <div class="flex justify-between w-11/12 mt-5 mb-8 max-[800px]:flex-col max-[800px]:gap-5">
+        <div class="flex items-start w-72 gap-2">
+            <figure class=" max-h-[2rem] pt-1 w-8">
+                <Image src="/images/icon-location.svg" alt="location img" height={5} width={10} />
+            </figure>
+            <p class="opacity-90">Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod temper incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="flex items-start gap-2 flex-col">
+            <div class="flex gap-1">
+                <figure class=" max-h-[2rem] pt-1 w-8">
+                    <Image src="/images/icon-phone.svg" alt="location img" height={6} width={15} />
+                </figure>
+                <p class="opacity-90">+1-543-123-4567</p>
+            </div>
+            <div>
+                <div class="flex gap-1">
+                    <figure class=" max-h-[2rem] pt-1 w-8">
+                        <Image src="/images/icon-email.svg" alt="location img" height={6} width={15} />
+                    </figure>
+                    <p class="opacity-90">example@fylo.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid gap-1">
+            {['About us', 'Jobs', 'Press', 'Blog'].map(item => (
+                <p class="opacity-90 cursor-pointer hover:opacity-100 hover:text-base hover:font-bold">{item}</p>
+            ))}
+        </div>
+        <div>
+            {['Contact us', 'Terms', 'Privacy'].map(item => (
+                <p class="opacity-90 cursor-pointer hover:opacity-100 hover:text-base hover:font-bold">{item}</p>
+            ))}
+            
+        </div>
+        <div class="flex justify-center gap-2 max-[800px]:mt-5 max-[800px]:w-full">
+            <figure class="group flex justify-center items-center p-3 h-6 w-6 rounded-full border-2 border-slate-50 hover:border-blue-100">
+                <i class="fa-brands fa-facebook-f group-hover:text-blue-100"></i>
+            </figure>
+            <figure class="group flex justify-center items-center h-6 p-3 w-6 rounded-full border-2 border-slate-50 hover:border-blue-100">
+                <i class="fa-brands fa-x-twitter group-hover:text-blue-100"></i>
+            </figure>
+            <figure class="group flex justify-center items-center h-6 w-6 p-3 rounded-full border-2 border-slate-50 hover:border-blue-100">
+                <i class="fa-brands fa-instagram group-hover:text-blue-100"></i>
+            </figure>
+        </div>
+    </div>
+</footer>

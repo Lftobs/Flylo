@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import Card from "./Card.astro";
+import Form from "./Form.astro";
+
+const cardData = [
+    {
+        content: 'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
+        name: 'Satish Patel',
+        img: '/images/profile-1.jpg',
+        role: 'Founder & CEO, Huddle'
+    },
+    {
+        content: 'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
+        name: 'Bruce McKenzie',
+        img: '/images/profile-2.jpg',
+        role: 'Founder & CEO, Huddle'
+    },
+    {
+        content: 'Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.',
+        name: 'Ivy Boyd',
+        img: '/images/profile-3.jpg',
+        role: 'Founder & CEO, Huddle'
+    },
+]
+---
+<section class=" bg-bg-main w-full grid place-items-center">
+    <div class="w-11/12 ml-[-1rem] flex justify-start max-sm:w-9/12 max-md:w-1/2" >
+        <Image src="/images/bg-quotes.png" alt="quotes" height={50} width={100}/>
+    </div>
+    
+    <div class="grid place-items-center mb-52 mt-[-1.5rem] grid-cols-3 gap-4 w-11/12 max-md:grid-cols-1 max-md:gap-6 ">
+        {cardData.map(data => (
+            <Card content={data.content} name={data.name} img={data.img} role={data.role} />
+        ))}
+    </div>
+    <Form />
+</section>

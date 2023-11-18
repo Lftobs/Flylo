@@ -1,0 +1,17 @@
+---
+import Button from "./Button.astro";
+
+---
+<form class="grid place-items-center max-w-[48rem] w-11/12 bg-bg-intro p-6 shadow-lg shadow-bg-footer z-10 " novalidate>
+    <h2 class=" text-2xl text-center peer font-raleway font-bold mb-2">Get early access today</h2>
+    <p class=" text-sm w-3/4 font-openSans opacity-90 mb-6 text-center">It only takes a minute to sign up and free starter tier is extremely generous. if you have any questions, our support team would be happy to help you.</p>
+    <div class="flex gap-4 w-[90%] max-sm:flex-col">
+        <div class="block w-2/3 max-sm:w-full">
+            <input class="peer w-full rounded-full h-10 px-10  text-bg-footer outline-none text-sm max-sm:h-12" type="email" placeholder="example@fylo.com"  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+            <small class="text-blue-err p-0 m-0 hidden ml-6 peer-invalid:flex">Please enter a valid email address</small>
+        </div>
+        <Button  isDefault={false}/>
+        
+    </div>
+    
+</form>
